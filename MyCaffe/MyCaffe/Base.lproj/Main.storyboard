@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YEx-8H-iWV">
+                                <rect key="frame" x="67" y="51" width="240" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="303" id="kAy-BB-0xC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IA5-kO-voj">
+                                <rect key="frame" x="187" y="400" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0x-96-Bcb">
+                                <rect key="frame" x="63" y="580" width="62" height="30"/>
+                                <state key="normal" title="选取照片"/>
+                                <connections>
+                                    <action selector="picPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="prk-Yd-aXW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugu-sR-wgP">
+                                <rect key="frame" x="248" y="580" width="67" height="30"/>
+                                <state key="normal" title="AICamera"/>
+                                <connections>
+                                    <action selector="goToAICamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Ba-f0-pqg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83804887530000005" green="0.94915407900000004" blue="0.99304944279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IA5-kO-voj" firstAttribute="top" secondItem="YEx-8H-iWV" secondAttribute="bottom" constant="46" id="5L4-Zp-gYm"/>
+                            <constraint firstItem="YEx-8H-iWV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="5Mw-9Q-3Px"/>
+                            <constraint firstItem="IA5-kO-voj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5aC-wh-rqC"/>
+                            <constraint firstItem="YEx-8H-iWV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="67" id="EaT-Ev-gIa"/>
+                            <constraint firstItem="k0x-96-Bcb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="G98-Yw-GzQ"/>
+                            <constraint firstItem="Ugu-sR-wgP" firstAttribute="bottom" secondItem="k0x-96-Bcb" secondAttribute="bottom" id="M0q-qg-wsg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k0x-96-Bcb" secondAttribute="bottom" constant="57" id="RHU-HZ-OC8"/>
+                            <constraint firstItem="Ugu-sR-wgP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" id="eti-L7-NNw"/>
+                            <constraint firstItem="YEx-8H-iWV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hw0-Cy-bb0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="YEx-8H-iWV" id="Fbo-04-bDT"/>
+                        <outlet property="picButton" destination="k0x-96-Bcb" id="Eat-UG-QVG"/>
+                        <outlet property="resultLabel" destination="IA5-kO-voj" id="OVh-5h-7Dc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.799999999999997" y="21.139430284857571"/>
+        </scene>
+    </scenes>
+</document>

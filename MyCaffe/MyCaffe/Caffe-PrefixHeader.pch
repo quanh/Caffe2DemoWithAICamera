@@ -1,0 +1,21 @@
+//
+//  Caffe-PrefixHeader.pch
+//  MyCaffe
+//
+//  Created by quanhai on 2017/5/9.
+//  Copyright © 2017年 Quanhai. All rights reserved.
+//
+
+#ifndef Caffe_PrefixHeader_pch
+#define Caffe_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+//#ifdef __cplusplus
+//# import <opencv2/opencv.hpp>
+//# import <opencv2/stitching/detail/blenders.hpp>
+//# import <opencv2/stitching/detail/exposure_compensate.hpp>
+//#endif
+
+
+#endif /* Caffe_PrefixHeader_pch */
